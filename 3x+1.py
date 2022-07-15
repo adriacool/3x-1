@@ -1,11 +1,13 @@
 from random import randint
 
-x=randint(1,2000)
-print(x)
+m=2**68
+n=2**69
+
+x=randint(m,n)
 
 print(f"0) Initial value ={x}")
 n=1
-while x!=4 and x!=2 and x!=1:
+while x!=1:
   if x%2!=0:
     x=3*x+1
     print(f"{n}) {x}")
@@ -14,7 +16,7 @@ while x!=4 and x!=2 and x!=1:
     print(f"{n}) {x}")
   n+=1  
 else:
-  print(f"Loop reached at {n-1} iterations(@x={x})")  
+  print(f"x={x} reached at {n-1} iterations")  
   n=0  
   while n<16:
     if x%2!=0:
@@ -25,6 +27,4 @@ else:
       print(x)
     n+=1
  
-
-
 
